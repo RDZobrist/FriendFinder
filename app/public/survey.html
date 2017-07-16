@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>FriendFinder</title>
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <!-- Font Awesome Glyphicons -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <title>Friend Finder | Survey</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-8 col-xs-6">
+                <h2 class="">Survey Questions</h2>
+                <hr>
+                <h3><strong>About You</strong></h3>
+                <h5><strong>Name (required)</strong></h5>
+                <input type="text" class="form-control" id="name-input" placeholder="Text input">
+                <br>
+                <h5><strong>Link to Image of You (required)</strong></h5>
+                <input type="text" class="form-control" id="image-input" placeholder="Text input">
+                <hr>
+                <h3><strong>Questions</strong></h3>
+                <!-- question 1 -->
+                <h4 class="questions"> <strong>Question 1</strong> <br>&emsp;You Love your Job.</h4> &emsp;
+                <select data-placeholder="" class="chosen-select" id="q1">
+                    <option value="">Select an option</option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3 (eh)</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <br>
+                <br>
+                <!-- question 2 -->
+                <h4 class="questions"><strong> Question 2 </strong><br>&emsp;You tend to dread family gatherings</h4> &emsp;
+                <select data-placeholder="" class="chosen-select" id="q2">
+                    <option value="">Select an option</option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3 (eh)</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <br>
+                <br>
+                <!-- question 3 -->
+                <h4 class="questions"><strong> Question 3</strong><br>&emsp;Watching Television is more appealing than a vigorous workout.</h4> &emsp;
+                <select data-placeholder="" class="chosen-select" id="q3">
+                    <option value="">Select an option</option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3 (eh)</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <br>
+                <br>
+                <!-- question 4 -->
+                <h4 class="questions"> <strong>Question 4 </strong><br>&emsp;You find it hard to smile during the work-week.</h4> &emsp;
+                <select data-placeholder="" class="chosen-select" id="q4">
+                    <option value="">Select an option</option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3 (eh)</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <br>
+                <br>
+                <!-- question 5 -->
+                <h4 class="questions"> <strong>Question 5</strong> <br>&emsp;You follow a great deal more than you lead.</h4> &emsp;
+                <select data-placeholder="" class="chosen-select" id="q5">
+                    <option value="">Select an option</option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3 (eh)</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <br>
+                <br>
+                <!-- question 6 -->
+                <h4 class="questions"> <strong>Question 6</strong> <br>&emsp;You're a night person.</h4> &emsp;
+                <select data-placeholder="" class="chosen" id="q6">
+                    <option value="">Select an option</option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3 (eh)</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <br>
+                <br>
+                <!-- question 7 -->
+                <h4 class="questions"> <strong>Question 7</strong> <br>&emsp;You prefer books over movies.</h4> &emsp;
+                <select data-placeholder="" class="chosen-select" id="q7">
+                    <option value="">Select an option</option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3 (eh)</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <br>
+                <br>
+                <!-- question 8 -->
+                <h4 class="questions"> <strong>Question 8</strong> <br>&emsp;Trust is something that is earned.</h4> &emsp;
+                <select data-placeholder="" class="chosen-select" id="q8">
+                    <option value="">Select an option</option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3 (eh)</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <br>
+                <br>
+                <!-- question 9 -->
+                <h4 class="questions"> <strong>Question 9</strong> <br>&emsp;You can effortlessly grasp another person's point-of-view.</h4> &emsp;
+                <select data-placeholder="" class="chosen-select" id="q9">
+                    <option value="">Select an option</option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3 (eh)</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <br>
+                <br>
+                <!-- question 10 -->
+                <h4 class="questions"><strong>Question 10</strong> <br>&emsp;You begin to experience intense feelings for your partner very quickly.</h4> &emsp;
+                <select data-placeholder="" class="chosen-select" id="q10">
+                    <option value="">Select an option</option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3 (eh)</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <br>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="modal-dialogue">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button class="close" data-dismiss="modal">&times;
+                                        </button>
+                                        <h4 class="modal-title">Meet your new friend!</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h3 id="bestMatchName"></h3>
+                                        <img src="" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <hr>
+                <a href="#">
+                    <button class="btn btnlg btn-primary col-lg-12 col-md-8 col-xs-6" id="submitBTN">
+                        <h5>Find My Friend <span class="glyphicon glyphicon-ok-circle"></span></h5></button>
+                </a>
+                <hr>
+                <br>
+                <br>
+                <footer class="footer">
+                    <div class="container-fluid text-center">
+                        <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/afflatus480/friendfinder">GitHub Repo</a></p>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+$('#submitBTN').on('click', function() {
+    let profileScoreArr = [$('#q1').val(), $('#q2').val(), $('#q3').val(), $('#q4').val(), $('#q5').val(), $('#q6').val(), $('#q7').val(), $('#q8').val(), $('#q9').val(), $('#q1').val()];
+    let profileName = $('#name-input').val().trim();
+    let profileImage = $('#image-input').val().trim();
+    let validSubmission = false;
+    var j;
+    var count;
+    console.log("--------------------");
+    console.log(profileName);
+    console.log("----------------------");
+    console.log(profileImage);
+    console.log("----------------------");
+    console.log(profileScoreArr);
+
+    if (!(validSubmission)) {
+        for (let i = 0, j = profileScoreArr.lemgth; i < j; i++) {
+            count += profileScoreArr[i];
+        }
+        if (count < 10) {
+
+            alert() alert("Please Submit an answer to every question to find your best match!");
+            setTimeot(function() { location.reload() }, 2000);
+        }else{
+        	let user = {
+        		name: profileName,
+        		Image:profileImage,
+        		scoreArr:profileScoreArr
+        	}
+        }return true;
+
+    }
+
+    $.post("/api/friends", user,
+        function(data) {
+
+          // If a user submitted an answer to every question
+          if (validSubmission) {
+            alert("Yay! Your best match is on the way");
+          }
+
+          // If a table is available... tell user they on the waiting list.
+          else {
+            alert("Please Submit an answer to every question to find your best match!");
+          }
+
+          // // Clear the form when submitting
+          // $("#reserve-name").val("");
+          // $("#reserve-phone").val("");
+          // $("#reserve-email").val("");
+          // $("#reserve-unique-id").val("");
+
+        });
+
+}
+// for (let i = 0, j = profileScoreArr.length; i<j;i++){
+// 	if(i===""){
+// 		
+// 	}
+// }
+
+
+})
+</script>
+
+</html>
