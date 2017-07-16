@@ -1,0 +1,15 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "Compatabilty-based friend-finding application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Robert Zobrist",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
