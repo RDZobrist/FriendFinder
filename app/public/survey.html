@@ -176,7 +176,7 @@
                 <br>
                 <footer class="footer">
                     <div class="container-fluid text-center">
-                        <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/afflatus480/friendfinder">GitHub Repo</a></p>
+                        <p><a href="/api/data/friends">API Friends List</a> | <a href="https://github.com/afflatus480/friendfinder">GitHub Repo</a></p>
                     </div>
                 </footer>
             </div>
@@ -190,62 +190,41 @@ $('#submitBTN').on('click', function() {
     let profileImage = $('#image-input').val().trim();
     let validSubmission = false;
     var j;
-    var count;
-    console.log("--------------------");
-    console.log(profileName);
-    console.log("----------------------");
-    console.log(profileImage);
-    console.log("----------------------");
-    console.log(profileScoreArr);
+    var count = 0;
+    var idx;
 
-    if (!(validSubmission)) {
-        for (let i = 0, j = profileScoreArr.lemgth; i < j; i++) {
-            count += profileScoreArr[i];
-        }
-        if (count < 10) {
 
-            alert() alert("Please Submit an answer to every question to find your best match!");
-            setTimeot(function() { location.reload() }, 2000);
-        }else{
-        	let user = {
-        		name: profileName,
-        		Image:profileImage,
-        		scoreArr:profileScoreArr
-        	}
-        }return true;
+    for (let i = 0, j = profileScoreArr.length; i < j; i++) {
+        idx = parseInt(profileScoreArr[i]);
+
+        count += idx;
+    }
+    if (count < 10) {
+        validSubmission = false;
+        alert("Please Select an answer for every question to meet your best match")
+    } else {
+        validSubmission = true;
 
     }
 
-    $.post("/api/friends", user,
-        function(data) {
+    var user = {
+        name: profileName,
+        Image: profileImage,
+        scoreArr: profileScoreArr
 
-          // If a user submitted an answer to every question
-          if (validSubmission) {
-            alert("Yay! Your best match is on the way");
-          }
+    }
 
-          // If a table is available... tell user they on the waiting list.
-          else {
-            alert("Please Submit an answer to every question to find your best match!");
-          }
 
-          // // Clear the form when submitting
-          // $("#reserve-name").val("");
-          // $("#reserve-phone").val("");
-          // $("#reserve-email").val("");
-          // $("#reserve-unique-id").val("");
+    // Grab the URL of the website
+    var currentURL = window.location.origin;
+    if (validSubmission) {
+        // AJAX post the data to the friends API. 
+        $.post(currentURL + "/api/friends", user, function(matchData) {
 
         });
+    };
+});
 
-}
-// for (let i = 0, j = profileScoreArr.length; i<j;i++){
-// 	if(i===""){
-// 		
-// 	}
-// }
-
-
-})
 </script>
 
 </html>
