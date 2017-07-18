@@ -12,7 +12,7 @@ var friendsArray = [{
     },
     {
         name: "Jessica",
-        image: "",
+        image: "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwi0hr2e8Y7VAhVR5GMKHUrvCqkQjRwIBw&url=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3AAnother_very_pretty_girl.jpg&psig=AFQjCNHWp0hoZEOuk15reaeQPNjYSIMi9w&ust=1500331669723763",
         scoreArr: [1, 1, 1, 3, 3, 5, 4, 5, 2, 4]
     },
     {
