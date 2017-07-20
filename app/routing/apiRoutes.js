@@ -33,11 +33,11 @@ module.exports = function(app) {
 
     app.post("/api/friends", function(req, res) {
 
-            // Note the code here. Our "server" will respond to requests and let users know if they have a table or not.
-            // It will do this by sending out the value "true" have a table
+            
+            
             const newuserScoreArr = req.body.scoreArr;
             
-            // get the length of user array, store that value in a block-scoped variable
+            // get the length of user array, store that value in a constant variable
             const arrLength = friendsArr.length;
 
             let bestMatch = 0;
@@ -58,10 +58,12 @@ module.exports = function(app) {
                 bestMatch = i;
             }
         }console.log("this is your best match: " + bestMatch);
-
+            console.warn(friendsArr);
         //return bestMatch data
         var bff = friendsArr[bestMatch]; 
        res.json(bff);
+
+
 
         //pushes new submission into the friendsList array
         friendsArr.push(req.body);

@@ -7,28 +7,28 @@
 
 var friendsArray = [{
         name: "Ahmed",
-        image: "",
+        image: "FriendFinder/app/assets/images/ahmed.jpg",
         scoreArr: [1, 2, 4, 4, 5, 3, 4, 3, 2, 4]
     },
     {
         name: "Jessica",
-        image: "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwi0hr2e8Y7VAhVR5GMKHUrvCqkQjRwIBw&url=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3AAnother_very_pretty_girl.jpg&psig=AFQjCNHWp0hoZEOuk15reaeQPNjYSIMi9w&ust=1500331669723763",
+        image: "FriendFinder/app/assets/images/jessica.jpg",
         scoreArr: [1, 1, 1, 3, 3, 5, 4, 5, 2, 4]
     },
     {
         name: "Frank",
-        image: "",
+        image: "FriendFinder/app/assets/images/frank.jpg",
         scoreArr: [2, 2, 3, 3, 3, 4, 1, 3, 5, 4],
 
     },
     {
-        name: "Markus",
-        image: "",
+        name: "Bill",
+        image: "FriendFinder/app/assets/images/billGates.jpg",
         scoreArr: [2, 4, 5, 3, 4, 3, 4, 4, 2, 2, ]
     },
     {
         name: "Mila",
-        image: "",
+        image: "FriendFinder/app/assets/images/mila.jpg",
         scoreArr: [4, 4, 5, 3, 2, 3, 2, 4, 2, 2, ]
     }
 ];
