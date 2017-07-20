@@ -10,7 +10,15 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <!-- Font Awesome Glyphicons -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Friend Finder | Survey</title>
+    <style>
+        #bff-image  {
+    max-height: 150px;
+    max-width: 150px;
+}
+    </style>
+
 </head>
 
 <body>
@@ -149,13 +157,19 @@
                 <div id="modal1" class="modal">
                     <div class="modal-content">
                         <h4>Closest Friend Match</h4>
+                        <button class="modal-action modal-close"><a href="/home"></a>&times;</button>
                         <div class="divider"></div>
-                        <h5 id="userMatch"></h5>
-                        <img id="userMatchImage" class="materialboxed" width="650" src="">
+                        <br>
+                        <br>
+                        <h5 id="bff-name"></h5>
+                        <img id="bff-image"  src="">
+                        <br>
+                        <br>
+
                     </div>
-                    <div class="modal-footer">
+                   <!--  <div class="modal-footer">
                         <a href="/survey" class="modal-action modal-close">Fill Again!</a>
-                    </div>
+                    </div> -->
                 </div>
                 <br>
                 <hr>
@@ -177,7 +191,7 @@
 </body>
 <script type="text/javascript">
 $('#submitBTN').on('click', function() {
-    let profileScoreArr = [$('#q1').val(), $('#q2').val(), $('#q3').val(), $('#q4').val(), $('#q5').val(), $('#q6').val(), $('#q7').val(), $('#q8').val(), $('#q9').val(), $('#q1').val()];
+    let profileScoreArr = [$('#q1').val(), $('#q2').val(), $('#q3').val(), $('#q4').val(), $('#q5').val(), $('#q6').val(), $('#q7').val(), $('#q8').val(), $('#q9').val(), $('#q10').val()];
     let profileName = $('#name-input').val().trim();
     let profileImage = $('#image-input').val().trim();
     let validSubmission = false;
@@ -185,14 +199,7 @@ $('#submitBTN').on('click', function() {
     var count = 0;
     var idx;
 
-    $('.modal').modal({
-        dismissible: false, // Modal can be dismissed by clicking outside of the modal
-        opacity: .5, // Opacity of modal background
-        inDuration: 300, // Transition in duration
-        outDuration: 200, // Transition out duration
-        startingTop: '4%', // Starting top style attribute
-        endingTop: '10%' // Ending top style attribute
-    });
+
 
     for (let i = 0, j = profileScoreArr.length; i < j; i++) {
         idx = profileScoreArr[i];
@@ -200,8 +207,12 @@ $('#submitBTN').on('click', function() {
 
         // if user didnt submit an answer to any of the ten questions
         if (idx == "") {
-            validSubmission = false;
-            alert("Please Select an answer for every question to meet your best match")
+            // advise user to submit answers to all survey questions to meet their match
+            alert("Please Select an answer for every question to meet your best match");
+            // reload the page
+            location.reload();
+            // break out of for loop
+            return validSubmission = false;
         }
         // if user submited answers to all questions, parse string representations of answers to integers
         else {
@@ -222,16 +233,26 @@ $('#submitBTN').on('click', function() {
     // Grab the URL of the website
     var currentURL = window.location.origin;
     if (validSubmission) {
+        $('.modal').modal({
+            dismissible: true, // Modal can be dismissed by clicking outside of the modal
+            opacity: .5, // Opacity of modal background
+            inDuration: 300, // Transition in duration
+            outDuration: 200, // Transition out duration
+            startingTop: '5%', // Starting top style attribute
+            endingTop: '10%' // Ending top style attribute
+        });
         // AJAX post the data to the friends API. 
-        $.post(currentURL + "/api/friends", user, function(data) {
+        $.post(currentURL + "/api/friends", user, function(bff) {
+            $('#bff-name').html(bff.name);
+            $("#bff-image").attr("src", bff.image);
+            // Pop open the modal dialog
+            $('#modal1').modal('open');
 
         });
+
     };
 
-    $('#userMatch').html(data.Name);
-    $("#userMatchImage").attr("src", data.Image);
-    // Pop open the modal dialog
-    $('#modal1').modal('open');
+
 });
 </script>
 

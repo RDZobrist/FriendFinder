@@ -40,27 +40,33 @@ module.exports = function(app) {
             // get the length of user array, store that value in a constant variable
             const arrLength = friendsArr.length;
 
-            let bestMatch = 0;
+            var bestMatch = 0;
             var scoreCompareArr = [];
 
             for (let i = 0; i < arrLength; i++) {
-                let scoresDiff = 0;
+                var scoresDiff = 0;
                 for (let j = 0; j < newuserScoreArr.length; j++) {
-                    scoresDiff += (parseInt(friendsArr[i].scoreArr[j]) - parseInt(newuserScoreArr[j]));
+                    scoresDiff += Math.abs(parseInt(friendsArr[i].scoreArr[j]) - parseInt(newuserScoreArr[j]));
                     
                 }
                 scoreCompareArr.push(scoresDiff);
+                
             }
        
         //after all friends are compared, find best match
         for (let i = 0; i < scoreCompareArr.length; i++) {
             if (scoreCompareArr[i] <= scoreCompareArr[bestMatch]) {
                 bestMatch = i;
+
             }
         }console.log("this is your best match: " + bestMatch);
-            console.warn(friendsArr);
+            
+        
+
         //return bestMatch data
-        var bff = friendsArr[bestMatch]; 
+        let bff = friendsArr[bestMatch]; 
+     
+        console.log(bff.image + " name " + bff.name);
        res.json(bff);
 
 
