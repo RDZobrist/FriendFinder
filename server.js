@@ -16,7 +16,7 @@ var app = express();
 
 
 // Sets an intial PORT
-var PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || 8088;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true}));

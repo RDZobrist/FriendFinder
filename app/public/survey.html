@@ -8,17 +8,22 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Font Awesome Glyphicons -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/../css/style.css">
     <title>Friend Finder | Survey</title>
     <style>
-        #bff-image  {
-    max-height: 150px;
-    max-width: 150px;
-}
-    </style>
+    #bff-image {
+        max-height: 150px;
+        max-width: 150px;
+    }
 
+    body {
+        background-color: lightblue;
+    }
+    </style>
 </head>
 
 <body>
@@ -157,17 +162,16 @@
                 <div id="modal1" class="modal">
                     <div class="modal-content">
                         <h4>Closest Friend Match</h4>
-                        <button class="modal-action modal-close"><a href="/home"></a>&times;</button>
+                        <button class="modal-action modal-close">&times;</button>
                         <div class="divider"></div>
                         <br>
                         <br>
                         <h5 id="bff-name"></h5>
-                        <img id="bff-image"  src="">
+                        <img id="bff-image" src="">
                         <br>
                         <br>
-
                     </div>
-                   <!--  <div class="modal-footer">
+                    <!--  <div class="modal-footer">
                         <a href="/survey" class="modal-action modal-close">Fill Again!</a>
                     </div> -->
                 </div>
@@ -182,7 +186,7 @@
                 <br>
                 <footer class="footer">
                     <div class="container-fluid text-center">
-                        <p><a href="/api/data/friends">API Friends List</a> | <a href="https://github.com/afflatus480/friendfinder">GitHub Repo</a></p>
+                        <p><a href="/api/friends" target="_blank">API Friends List</a> | <a href="https://github.com/afflatus480/FriendFinder" target="_blank">GitHub Repo</a></p>
                     </div>
                 </footer>
             </div>
@@ -222,6 +226,7 @@ $('#submitBTN').on('click', function() {
 
         }
     }
+    // new user object
     var user = {
         name: profileName,
         Image: profileImage,

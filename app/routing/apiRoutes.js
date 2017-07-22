@@ -18,10 +18,13 @@ module.exports = function(app) {
     // (ex: localhost:PORT/api/admin... they are shown a JSON of the data in the table)
     // ---------------------------------------------------------------------------
 
-    app.get("/api/survey", function(req, res) {
+    app.get("/api/survey", (req, res) => {
         res.json(friendsArr);
     });
 
+    app.get("/api/friends", (req, res) => {
+        res.json(friendsArr);
+    });
 
     // API POST Requests
     // Below code handles when a user submits a form and thus submits data to the server.
@@ -31,43 +34,44 @@ module.exports = function(app) {
     // Then the server saves the data to the tableData array)
     // ---------------------------------------------------------------------------
 
-    app.post("/api/friends", function(req, res) {
+    app.post("/api/friends", (req, res) => {
 
-            
-            
-            const newuserScoreArr = req.body.scoreArr;
-            
-            // get the length of user array, store that value in a constant variable
-            const arrLength = friendsArr.length;
 
-            var bestMatch = 0;
-            var scoreCompareArr = [];
 
-            for (let i = 0; i < arrLength; i++) {
-                var scoresDiff = 0;
-                for (let j = 0; j < newuserScoreArr.length; j++) {
-                    scoresDiff += Math.abs(parseInt(friendsArr[i].scoreArr[j]) - parseInt(newuserScoreArr[j]));
-                    
-                }
-                scoreCompareArr.push(scoresDiff);
-                
+        const newuserScoreArr = req.body.scoreArr;
+
+        // get the length of user array, store that value in a constant variable
+        const arrLength = friendsArr.length;
+
+        var bestMatch = 0;
+        var scoreCompareArr = [];
+
+        for (let i = 0; i < arrLength; i++) {
+            var scoresDiff = 0;
+            for (let j = 0; j < newuserScoreArr.length; j++) {
+                scoresDiff += Math.abs(parseInt(friendsArr[i].scoreArr[j]) - parseInt(newuserScoreArr[j]));
+
             }
-       
+            scoreCompareArr.push(scoresDiff);
+
+        }
+
         //after all friends are compared, find best match
         for (let i = 0; i < scoreCompareArr.length; i++) {
             if (scoreCompareArr[i] <= scoreCompareArr[bestMatch]) {
                 bestMatch = i;
 
             }
-        }console.log("this is your best match: " + bestMatch);
-            
-        
+        }
+        console.log("this is your best match: " + bestMatch);
+
+
 
         //return bestMatch data
-        let bff = friendsArr[bestMatch]; 
-     
+        let bff = friendsArr[bestMatch];
+
         console.log(bff.image + " name " + bff.name);
-       res.json(bff);
+        res.json(bff);
 
 
 
@@ -75,19 +79,10 @@ module.exports = function(app) {
         friendsArr.push(req.body);
 
 
-});
+    });
 
 
 
-// ---------------------------------------------------------------------------
-// I added this below code so you could clear out the table while working with the functionality.
-// Don"t worry about it!
-
-app.post("/api/clear", function() {
-    // Empty out the arrays of data
-    userScore = [];
 
 
-    console.log(userScore);
-});
 };
