@@ -21,7 +21,8 @@ Set up web servers with Node.js using Express.
 * **path**
 
 ##### Getting Started
-* **Clone or fork and run using server.js in the command line.**
+* **Clone or fork **
+* **run using server.js in the command line.
 * **Use localhost:8088**
 
 

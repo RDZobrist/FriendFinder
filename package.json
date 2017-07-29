@@ -12,6 +12,6 @@
   "dependencies": {
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
-    "terminal-kit": "^1.11.1"
+    
   }
 }
