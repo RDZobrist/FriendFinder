@@ -1,3 +1,27 @@
-<h1>A javascript, node.js, and express.js application that gathers 
-information from users via  a survey designed to gather personality traits, using said data to introduce users with 
-the highest compatability to eachother </h1>
+# friend-finder-node-and-express-server
+
+Friend Finder app demonstrating Node and Express with AJAX.
+Overall purpose is a web app designed to help find a compatible friend.
+Set up web servers with Node.js using Express.
+
+##### Home Page
+![Friend Finder Home Page](/app/images/scree-shot-home.PNG?raw=true)
+
+
+##### Technologies Used
+* **JavaScript**
+* **jQuery**
+* **AJAX**
+* **Node.js**
+* **Express**
+
+##### The following npm modules were used
+* **express**
+* **body-parser**
+* **path**
+
+##### Getting Started
+* **Clone or fork and run using server.js in the command line.**
+* **Use localhost:8088**
+
+
