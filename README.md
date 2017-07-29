@@ -10,7 +10,7 @@ Set up web servers with Node.js using Express.
 
 ##### Technologies Used
 * **JavaScript**
-* **jQuery**
+
 * **AJAX**
 * **Node.js**
 * **Express**
