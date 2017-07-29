@@ -5,7 +5,7 @@ Overall purpose is a web app designed to help find a compatible friend.
 Set up web servers with Node.js using Express.
 
 ##### Home Page
-![Friend Finder Home Page](app/public/images/screen-shot-home.PNG?raw=true)
+![Friend Finder Home Page](app/public/images/screen-Shot-home.png?raw=true)
 
 
 ##### Technologies Used
