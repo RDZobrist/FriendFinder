@@ -14,67 +14,42 @@
     <!-- Font Awesome Glyphicons -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <script src="https://use.fontawesome.com/34d014c58c.js"></script>
-    <link rel="stylesheet" href="public/css/style.css">
     <title>Friend Finder | Home</title>
     <style>
-    .row.fix {
-        margin-top: 10px;
-    }
-
-
-
-    .container-fluid.content button {
-        margin-bottom: 370px;
-        margin-right: 30px;
-        margin-left: 30px;
+    #handsImg {
+        width: 100%;
+        max-height: 250px;
     }
 
     body {
-        text-rendering: optimizeLegibility;
-        background-image: url(images/friendsGroup.jpg);
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        font-weight: 300;
-        font-size: 20px;
-        height: 140vh;
+        background-color: lightblue;
     }
-
-    p a {
-        color: black;
-        font-size: 24px;
-        text-rendering: optimizeLegibility;
-    
-        
     </style>
 </head>
 
 <body>
-    <div class="container-fluid content">
-        <div class="row fix"></div>
-        <div class="row fix"></div>
-        <div class="row fix"></div>
-        <div class="row">
+    <div class="container-fluid">
+        <span class="image-responsive">
+            <img src="https://archcapeinn.com/blog/wp-content/uploads/2012/08/couple-holding-hands-sunset150685331pc.jpg" alt="couple holding hands on a beach" id="handsImg">
+        </span>
+        <div class="jumbotron">
             <h1 class="text-center"><i class="fa fa-facebook-official"></i><strong> FriendFinder</strong></h1>
+            <hr>
             <h2 class="text-center">Answer some general questions about yourself, your view on life.</h2>
             <h4 class="text-center">And we'll introduce you to the most compatable friend!</h4>
-        </div>
-        <div class="row">
-            <div class="col-xs-12-md-12">
-                <div class="text-center">
-                    <a href="/survey">
-                        <button class="btn btnlg btn-primary" id="to-survey-button">
-                            <h5><span class="glyphicon glyphicon-list"></span>Take the Survey</h5></button>
-                    </a>
-                    <div class="container-fluid text-center">
-                        <p><a href="/api/friends" target="_blank">API Friends List</a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<a href="https://github.com/afflatus480/FriendFinder" target="_blank">GitHub Repo</a></p>
-                    </div>
-                </div>
+            <br>
+            <div class="text-center">
+                <a href="/survey">
+                    <button class="btn btnlg btn-primary" id="to-survey-button">
+                        <h5><span class="glyphicon glyphicon-list"></span>Take the Survey</h5></button>
+                </a>
             </div>
         </div>
     </div>
     <footer class="footer">
+        <div class="container-fluid text-center">
+            <p><a href="/api/friends" target="_blank" class="text-warning">API Friends List</a> | <a href="https://github.com/afflatus480/FriendFinder" class="text-warning" target="_blank">GitHub Repo</a></p>
+        </div>
     </footer>
     </div>
 </body>
