@@ -21,8 +21,5 @@ Set up web servers with Node.js using Express.
 * **path**
 
 ##### Getting Started
-* **Clone or fork **
-* **run using server.js in the command line.
-* **Use localhost:8088**
-
+<a href="https://friend-finder-9981.herokuapp.com/">RdzWebDevSoltuons.com</a>
 
