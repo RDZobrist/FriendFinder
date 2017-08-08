@@ -22,3 +22,38 @@ html  {
 	background-position: center;
 
 }
+
+div.modal #modal_ {
+	background: url(images/friendsGeoup.jpg)
+	margin: 25% auto;
+}
+
+
+
+
+
+
+
+
+/*
+
+
+         <div id="modal_" class="modal">
+                    <div class="modal-content">
+                        <h4>Closest Friend Match</h4>
+                        <button class="modal-action modal-close">&times;</button>
+                        <div class="divider"></div>
+                        <br>
+                        <br>
+                        <h5 id="bff-name"></h5>
+                        <br>
+                        <div class="container modal_container"> 
+                        <img id="bff-image" src="">
+                        </div>
+                        <br>
+                        <br>
+                    </div>
+
+
+
+*/
