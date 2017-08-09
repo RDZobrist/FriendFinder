@@ -21,5 +21,5 @@ Set up web servers with Node.js using Express.
 * **path**
 
 ##### Getting Started
-<a href="https://friend-finder-9981.herokuapp.com/">RdzWebDevSoltuons.com</a>
+<a href="https://friend-finder-9981.herokuapp.com/">RdzWebDevSoultions.com</a>
 
